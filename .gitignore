@@ -1,0 +1,44 @@
+# ======================
+# Java Compilation Files
+# ======================
+*.class
+*.jar
+*.war
+*.ear
+
+# Compiled Output Folders
+bin/
+out/
+build/
+target/
+lib/
+
+# ======================
+# IntelliJ IDEA
+# ======================
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# ======================
+# OS Files
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# Log Files
+# ======================
+*.log
+
+# ======================
+# Miscellaneous
+# ======================
+*.swp
+*.bak
+*.tmp
+*.class
