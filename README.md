@@ -1,59 +1,80 @@
 # Movie Ticket Booking System
 
-## Installation
+A JavaFX-based application for booking movie tickets, managing movies, and handling showtimes and bookings for both customers and admins.
 
-1. Clone the repository:
+## Features
+
+- **Admin Panel**
+  - Add new movies with multiple showtimes and screens.
+  - View all movies and their details.
+  - View all booked tickets.
+  - Secure admin login (default password: `admin123`).
+
+- **Customer Panel**
+  - Browse all available movies and showtimes.
+  - Book tickets by selecting movie, showtime, and seat.
+  - Simple, modern UI built with JavaFX.
+
+## Project Structure
+
 ```
-git clone https://github.com/your-username/movie-ticket-system.git
+src/
+  logic/      # Core logic: Movie, Customer, Ticket, Managers
+  ui/         # JavaFX UI screens
+  styles/     # CSS for JavaFX
+  lib/        # JavaFX libraries and native dependencies
+resource/     # (reserved for images, etc.)
 ```
-2. Open the project in your preferred Java IDE.
-3. Ensure you have JavaFX installed and configured in your IDE.
-4. Build and run the `MovieTicketSystem.java` file to start the application.
 
-## Usage
+## Getting Started
 
-1. When the application starts, you will see the main menu with three options:
-   - Login as Admin
-   - Continue as Customer
-   - Exit
+### Prerequisites
 
-2. **Admin Menu**:
-   - Add Movie with Showtimes
-   - View All Movies
-   - View All Bookings
-   - Logout
+- Java 17 or later
+- JavaFX 21+ (included in `src/lib/`)
+- A Java IDE (e.g., IntelliJ IDEA, VS Code)
 
-3. **Customer Menu**:
-   - View Movies
-   - Book Ticket
-   - Go Back
+### Running the Application
 
-4. **Admin Login**:
-   - The default admin password is `admin123`.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-username/movie-ticket-system.git
+   cd movie-ticket-system
+   ```
 
-5. **Booking Tickets**:
-   - Select a movie from the list.
-   - Choose a showtime and available seat.
-   - Enter your name to complete the booking.
+2. **Open in your IDE** and ensure the JavaFX libraries in `src/lib/` are added to your project/module dependencies.
 
-## Classes Used
+3. **Run the application:**
+   - Run the `logic.Main` class to launch the JavaFX GUI.
+   - Alternatively, run `logic.MovieTicketSystem` for the console version.
 
-The application consists of the following main classes:
+### Usage
 
-- `Customer`: Represents a customer with a unique ID.
-- `Movie`: Represents a movie with details like title, genre, rating, duration, and price.
-- `MovieManager`: Handles the management of movies, including adding, viewing, and retrieving movies.
-- `TicketManager`: Manages the booking of tickets, including adding and viewing tickets.
-- `MovieTicketSystem`: The main entry point of the application, handling the user interface and flow.
+- On launch, you'll see a welcome screen.
+- **Customers** can view movies and book tickets.
+- **Admins** can log in (password: `admin123`) to add movies, view movies, and see all bookings.
+
+## Main Classes
+
+- [`logic.Movie`](src/logic/Movie.java): Represents a movie and its showtimes.
+- [`logic.MovieManager`](src/logic/MovieManager.java): Handles movie CRUD operations.
+- [`logic.Ticket`](src/logic/Ticket.java): Represents a booked ticket.
+- [`logic.TicketManager`](src/logic/TicketManager.java): Manages all ticket bookings.
+- [`logic.Customer`](src/logic/Customer.java): Represents a customer.
+- [`logic/Main.java`](src/logic/Main.java): JavaFX application entry point.
+- [`logic/MovieTicketSystem.java`](src/logic/MovieTicketSystem.java): Console application entry point.
+
+## Customization
+
+- **Styling:** Modify [`src/styles/app.css`](src/styles/app.css) for UI changes.
+- **JavaFX Libraries:** Update or replace JARs in [`src/lib/`](src/lib/) as needed for your platform.
 
 ## Contributing
 
-If you would like to contribute to the project, please follow these steps:
-
 1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Implement your changes and ensure the application is working as expected.
-4. Submit a pull request with a detailed description of your changes.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and test thoroughly.
+4. Submit a pull request with a clear description.
 
 ## License
 
